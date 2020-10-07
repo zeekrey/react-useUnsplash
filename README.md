@@ -27,7 +27,7 @@ const [image, imageMeta] = useUnsplash({
 This is the object thats needs to be provided when using the hook:
 
 * **apikey**: Your Unplash API key. If you don't have one, you can get it here: [unsplash.com/developers](https://unsplash.com/developers)
-* **id**: This is the image id. The is this: https://unsplash.com/photos/<id>. For example https://unsplash.com/photos/jK2LuKGd_vI => id = jK2LuKGd_vI
+* **id**: This is the image id. The is this: *unsplash.com/photos/<id>*. For example https://unsplash.com/photos/jK2LuKGd_vI => id = jK2LuKGd_vI
 * **options**: Finde the most updated version here: [unsplash.com/documentation](https://unsplash.com/documentation#supported-parameters)
 
 The hook returns an array with the following two parameters:
