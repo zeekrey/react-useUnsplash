@@ -14,7 +14,7 @@ export default {
             dir: 'dist',
             // file: 'index.esm.js',
             format: 'esm',
-            plugins: [terser()],
+            plugins: [terser({ format: { comments: false } })],
         },
     ],
     plugins: [typescript()],
