@@ -1,5 +1,5 @@
 {
-  "name": "@zeekrey/react-useunsplash",
+  "name": "@zeekrey/useunsplash",
   "version": "0.0.1-1",
   "main": "index.js",
   "types": "index.d.ts",
@@ -15,7 +15,7 @@
     "semantic-release": "semantic-release",
     "np:prerelease": "np prerelease"
   },
-  "dependencies": {
+  "peerDependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
