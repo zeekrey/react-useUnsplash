@@ -1,3 +1,8 @@
+/**
+ * Date: 20.10.2020
+ * From: https://unsplash.com/documentation#response-9
+ */
+
 export interface UnsplashObject {
     id: string
     created_at: string
@@ -25,8 +30,12 @@ export interface UnsplashObject {
             longitude: number
         }
     }
-    tags: object[]
-    current_user_collections: object[]
+    tags: {
+        [key: string]: string
+    }[]
+    current_user_collections: {
+        [key: string]: string
+    }[]
     urls: {
         raw: string
         full: string

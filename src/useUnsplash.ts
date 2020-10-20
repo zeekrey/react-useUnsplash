@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import * as React from 'react'
 import { UnsplashObject } from '../types/unplashObject'
 
 interface Props {
@@ -20,8 +20,8 @@ function useUnsplash(
     { apikey, id, options = {} }: Props = { apikey: '', id: '' },
 ): [string | undefined, UnsplashObject | undefined] {
     const baseUrl = 'https://api.unsplash.com/photos/'
-    const [image, setImage] = useState<string | undefined>(undefined)
-    const [imageMeta, setImageMeta] = useState<UnsplashObject | undefined>(undefined)
+    const [image, setImage] = React.useState<string | undefined>(undefined)
+    const [imageMeta, setImageMeta] = React.useState<UnsplashObject | undefined>(undefined)
 
     const applyOptions = (rawUrl: string): string => {
         const source = (Object.keys(options) as Array<keyof Props['options']>).reduce(
@@ -31,7 +31,7 @@ function useUnsplash(
         return source
     }
 
-    useEffect(() => {
+    React.useEffect(() => {
         if (apikey.length && id.length) {
             fetch(`${baseUrl}${id}?client_id=${apikey}`).then(async (response) => {
                 const res = await response.json()

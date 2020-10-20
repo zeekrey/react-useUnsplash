@@ -1,6 +1,6 @@
 # useUnsplash - React hook
 
-> React hook to get a unsplash image and its metadata with ease. 
+> React hook to get a unsplash image and its metadata with ease.
 
 ## Usage
 
@@ -26,14 +26,37 @@ const [image, imageMeta] = useUnsplash({
 
 This is the object thats needs to be provided when using the hook:
 
-* **apikey**: Your Unplash API key. If you don't have one, you can get it here: [unsplash.com/developers](https://unsplash.com/developers)
-* **id**: This is the image id. The is this: *unsplash.com/photos/<id>*. For example https://unsplash.com/photos/jK2LuKGd_vI => id = jK2LuKGd_vI
-* **options**: Finde the most updated version here: [unsplash.com/documentation](https://unsplash.com/documentation#supported-parameters)
+-   **apikey**: Your Unplash API key. If you don't have one, you can get it here: [unsplash.com/developers](https://unsplash.com/developers)
+-   **id**: This is the image id. The is this: _unsplash.com/photos/<id>_. For example https://unsplash.com/photos/jK2LuKGd_vI => id = jK2LuKGd_vI
+-   **options**: Finde the most updated version here: [unsplash.com/documentation](https://unsplash.com/documentation#supported-parameters)
 
 The hook returns an array with the following two parameters:
 
-* image: The actual image endpoint. We use the 'raw' version of the image like described here: [unsplash.com/documentation](https://unsplash.com/documentation#example-image-use)
-* imageMeta: An object that is described here: [unsplash.com/documentation](https://unsplash.com/documentation#response-9https://unsplash.com/documentation#response-9)
+-   image: The actual image endpoint. We use the 'raw' version of the image like described here: [unsplash.com/documentation](https://unsplash.com/documentation#example-image-use)
+-   imageMeta: An object that is described here: [unsplash.com/documentation](https://unsplash.com/documentation#response-9https://unsplash.com/documentation#response-9)
+
+```typescript
+interface Props {
+    apikey: string
+    id: string
+    options?: {
+        w?: number
+        h?: number
+        ar?: string
+        crop?: string
+        fm?: string
+        q?: number
+        fit?: string
+        dpr?: number
+    }
+}
+
+function useUnsplash(
+    { apikey, id, options = {} }: Props = { apikey: '', id: '' },
+): [string | undefined, UnsplashObject | undefined] {
+    //...
+}
+```
 
 ## Contributing
 
@@ -43,7 +66,7 @@ Please make sure to update tests as appropriate.
 
 ### Development
 
-Run tests with 
+Run tests with
 
 ```
 yarn test
@@ -56,4 +79,5 @@ cd <project-root> && echo process.env.APIKEY = 'your_api_key' > .env.js
 ```
 
 ## License
+
 [MIT](https://choosealicense.com/licenses/mit/)
