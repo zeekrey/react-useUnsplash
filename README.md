@@ -57,5 +57,3 @@ cd <project-root> && echo process.env.APIKEY = 'your_api_key' > .env.js
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
-
-hedpoh+fRuq`gq56iueX
