@@ -1,6 +1,6 @@
 {
   "name": "react-useUnsplash",
-  "version": "0.0.0-development",
+  "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",
   "files": ["dist/*"],
@@ -10,7 +10,8 @@
   "scripts": {
     "test": "jest",
     "build": "rollup --config",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "np:prerelease": "np prerelease"
   },
   "dependencies": {
     "react": "^16.13.1",

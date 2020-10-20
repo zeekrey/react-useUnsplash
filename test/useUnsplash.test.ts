@@ -12,6 +12,10 @@ const spy = jest.spyOn(console, 'error')
 describe('Testing useUnsplash', () => {
     test('With correct props', async () => {
         const { APIKEY } = process.env
+        if (typeof APIKEY === 'undefined') {
+            console.error('Please provide a APIKEY within the env to run test.')
+            return
+        }
         const { result, waitForNextUpdate } = renderHook(() =>
             useUnsplash({
                 apikey: APIKEY,

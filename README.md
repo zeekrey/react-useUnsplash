@@ -16,7 +16,7 @@ Basic usage:
 
 ```javascript
 const [image, imageMeta] = useUnsplash({
-                apikey: '21djopdjo21kop122',
+                apikey: '21jkwopdio29khp192',
                 id: 'VMPhyAoVqqk',
                 options: { w: 600, ar: '2:1', fit: 'crop' },
             }),
@@ -52,8 +52,10 @@ yarn test
 To run tests you need to create env file like this:
 
 ```
-cd <project-root> && echo process.env.APIKEY = 'Msjkp4qxQOMEA7a0ps_lkhQa0Hkv3CsbjFn_X8fWRDE' > .env.js
+cd <project-root> && echo process.env.APIKEY = 'your_api_key' > .env.js
 ```
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+hedpoh+fRuq`gq56iueX
