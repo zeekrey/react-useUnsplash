@@ -1,4 +1,4 @@
-# useUnsplash - React hook
+# useUnsplash - A react hook
 
 > React hook to get a unsplash image and its metadata with ease.
 

@@ -37,6 +37,7 @@ function useUnsplash(
                 const res = await response.json()
                 setImage(() => applyOptions(res.urls.raw))
                 setImageMeta(res)
+                console.log(res)
             })
         } else {
             console.error(
