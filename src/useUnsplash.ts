@@ -16,7 +16,7 @@ function useUnsplash(
         return source
     }
 
-    React.useEffect(() => {
+    // React.useEffect(() => {
         if (apikey.length && id.length) {
             fetch(`${baseUrl}${id}?client_id=${apikey}`).then(async (response) => {
                 const res = await response.json()
@@ -29,7 +29,7 @@ function useUnsplash(
                 'Please provide correct props to useUnsplash like so: useUnsplash({apikey: <yourapikey>, id=<imageid>, options?=<options>}).',
             )
         }
-    }, [])
+    // }, [])
 
     return [image, imageMeta]
 }
