@@ -17,5 +17,10 @@ export default {
             plugins: [terser({ format: { comments: false } })],
         },
     ],
-    plugins: [typescript()],
+    plugins: [
+        typescript({
+            declaration: true,
+            declarationDir: 'dist',
+        }),
+    ],
 }

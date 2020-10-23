@@ -1,8 +1,8 @@
 {
     "name": "react-useunsplash",
     "version": "0.0.1-3",
-    "main": "index.js",
-    "types": "index.d.ts",
+    "main": "dist/useUnsplash.js",
+    "types": "dist/useUnsplash.d.ts",
     "files": [
         "dist/*"
     ],
@@ -12,6 +12,8 @@
     "scripts": {
         "test": "jest",
         "build": "rollup --config",
+        "build:tsc": "tsc --project tsconfig.json",
+        "build:terser": "terser --compress --mangle --output dist/useUnsplash.js dist/useUnsplash.js",
         "np:prerelease": "np prerelease",
         "example:build": "tsc --project example/example.tsconfig.json"
     },
