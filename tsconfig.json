@@ -3,9 +3,10 @@
     "compilerOptions": {
         "strict": true,
         "esModuleInterop": true,
-        "lib": ["dom", "es2015"],
+        "target": "ES2015",
         "jsx": "react",
+        "outDir": "dist",
         "declaration": true,
-        "declarationDir": "dist",
+        "declarationDir": "dist"
     }
 }
