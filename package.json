@@ -14,7 +14,7 @@
         "build": "rollup --config",
         "build:tsc": "tsc --project tsconfig.json",
         "build:terser": "terser --compress --mangle --output dist/useUnsplash.js dist/useUnsplash.js",
-        "np:prerelease": "np prerelease",
+        "np:prerelease": "np prerelease --tag=beta",
         "example:build": "tsc --project example/example.tsconfig.json"
     },
     "peerDependencies": {
